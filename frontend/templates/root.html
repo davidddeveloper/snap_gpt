@@ -1,0 +1,26 @@
+{% load static tailwind_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'logo_2.png' %}">
+    <script defer src="{% static 'main.js' %}"></script>
+    <title>Home</title>
+    <style>
+        .chat {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 4px;
+        }
+    </style>
+    {% tailwind_css %}
+</head>
+<body>
+    {% block interact %} {% endblock %}
+    {% block home %} {% endblock %}
+
+</body>
